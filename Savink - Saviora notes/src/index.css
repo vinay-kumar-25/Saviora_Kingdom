@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primaryYellow: #e9d758;
+  --color-primaryGreen: #297373;
+  --color-primaryOrange: #ff8552;
+  --color-primarygrey: oklch(35% 0.01 270);
+  --color-primarywhite: oklch(98% 0.005 100);
+  --color-primaryblack: oklch(20% 0.01 270);
+
+  --animate-rise_popup:rise 300ms cubic-bezier(.68,.52,.27,.93)  forwards;
+
+  @keyframes rise{
+    0%{
+      opacity: 0;
+      transform:translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform:translateY(0);
+    }
+  }
+}
+
+
+:root {
+  font-family: "Inter",system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*{
+  box-sizing: border-box;
+}
+
+
+
