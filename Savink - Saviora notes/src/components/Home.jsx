@@ -72,10 +72,10 @@ const Home = () => {
   };
 
   return (
-    <div className="text-white w-full place-self-center flex justify-center flex-col items-center gap-8 text-2xl ">
+    <div className="text-white w-full p-2  place-self-center flex justify-center flex-col items-center gap-8 text-2xl ">
       <div className="flex gap-4 h-16 w-full  justify-between">
         <input
-          className="font-medium flex-1/2 w-auto bg-primaryYellow text-primaryGreen border-primaryYellow border-2 rounded-xl  focus:border-primaryGreen outline-0 p-1 px-2"
+          className="font-medium flex-1/2  bg-primaryYellow text-primaryGreen border-primaryYellow border-2 rounded-xl  focus:border-primaryGreen outline-0 p-1 px-2"
           type="text"
           value={title}
           placeholder="Enter Title..."
@@ -91,7 +91,7 @@ const Home = () => {
       <textarea
         value={value}
         placeholder="Enter your note here..."
-        className="border-2 bg-primaryGreen w-full font-medium rounded-2xl p-4 h-[60vh] border-primaryYellow text-primaryYellow text-primaryYellow outline-0 "
+        className="border-2 border-primaryGreen bg-primaryGreen w-full font-medium rounded-2xl p-4 h-[60vh] text-primaryYellow outline-0 "
         onChange={(e) => setvalue(e.target.value)}
       ></textarea>
     </div>

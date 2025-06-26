@@ -13,7 +13,7 @@ const Pastes = () => {
 
   const filterednotiis = search
     ? notiilist.filter((noti) =>
-        noti.title.toLowerCase().includes(search.toLowerCase())
+        noti.title.toLowerCase().includes(search.toLowerCase())||noti.value.toLowerCase().includes(search.toLowerCase())
       )
     : notiilist;
   // first time load the notiis present in the localstorage
@@ -32,6 +32,9 @@ const Pastes = () => {
   const edithandler = (notid) => {
     navigate(`/?paste_id=${notid}`);
   };
+  const handleview =(notid)=>{
+    navigate(`/view?paste_id=${notid}`);
+  }
   return (
     <div className="flex w-full gap-4 flex-col self-center overflow-hidden place-self-center items-center justify-center">
       {/* search bar */}
@@ -43,7 +46,7 @@ const Pastes = () => {
 
       {filterednotiis.map((singlenoti) => (
         // complete card note l
-        <div className="flex relative flex-col w-[50rem] gap-2 rounded-2xl overflow-hidden border-2 transition-all duration-300 group border-primaryYellow hover:border-primaryGreen">
+        <div className=" pl-3 flex relative flex-col w-full gap-2 rounded-2xl overflow-hidden border-2 transition-all duration-300 group border-primaryYellow hover:border-primaryGreen">
           <div className="absolute top-0 transition-all duration-300 left-0 bg-primaryYellow w-5 h-full group-hover:bg-primaryGreen"></div>
           {/* top section */}
           <div className="w-full top-0 p-2  flex justify-between">
@@ -60,7 +63,7 @@ const Pastes = () => {
               >
                <FontAwesomeIcon icon={faPencil}></FontAwesomeIcon>
               </button>
-              <button className="px-2 border rounded-sm py-2 w-9 flex justify-center items-center transition-all duration-300 h-10 hover:text-primaryGreen text-primaryYellow border-primaryYellow   hover:border-primaryGreen">
+              <button onClick={()=>{handleview(singlenoti.id)}} className="px-2 border rounded-sm py-2 w-9 flex justify-center items-center transition-all duration-300 h-10 hover:text-primaryGreen text-primaryYellow border-primaryYellow   hover:border-primaryGreen">
                 <FontAwesomeIcon icon={faEye}/>
               </button>
               <button
@@ -88,7 +91,7 @@ const Pastes = () => {
           </div>
           {/* down note section  */}
           
-            <div className="text-primaryGreen font-semibold pb-4 px-6">{singlenoti.value}</div>
+            <div className="text-primaryGreen font-semibold pb-4 whitespace-pre-wrap px-6">{singlenoti.value}</div>
          
         
         </div>

@@ -1,6 +1,10 @@
-.mainpage{
-    display: flex;
-    flex-flow: column;
-    gap: 2rem;
-    width: 810px;   
+.mainpage {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 810px;
+  padding: 0 1rem; /* Optional: for padding on small screens */
+  margin: 0 auto;   /* Center horizontally on large screens */
+  box-sizing: border-box; /* Ensure padding doesn’t break width */
 }
