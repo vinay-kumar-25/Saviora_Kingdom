@@ -10,27 +10,27 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div className="mainpage">
+      <div className="navbar_section">
         <Navbar />
-        <Home />
+        <Home className="req_page" />
       </div>
     ),
   },
   {
     path: "/pastes_list",
     element: (
-      <div className="mainpage">
+      <div className="navbar_section">
         <Navbar />
-        <Pastes />
+        <Pastes className="req_page" />
       </div>
     ),
   },
   {
     path: "/view",
     element: (
-      <div className="mainpage">
+      <div className="navbar_section">
         <Navbar />
-        <View />
+        <View className="req_page" />
       </div>
     ),
   },

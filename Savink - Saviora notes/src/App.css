@@ -1,10 +1,13 @@
-.mainpage {
+.navbar_section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  max-width: 810px;
+  width: 800px;
+  max-width: 100vh;
   padding: 0 1rem; /* Optional: for padding on small screens */
   margin: 0 auto;   /* Center horizontally on large screens */
   box-sizing: border-box; /* Ensure padding doesn’t break width */
+  height: 100vh;
 }
+

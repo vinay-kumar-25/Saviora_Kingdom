@@ -36,17 +36,17 @@ const Pastes = () => {
     navigate(`/view?paste_id=${notid}`);
   }
   return (
-    <div className="flex w-full gap-4 flex-col self-center overflow-hidden place-self-center items-center justify-center">
+    <div className="flex w-full gap-4 flex-col  ">
       {/* search bar */}
       <input
         placeholder="search here...."
-        className="w-full sticky top-2 border-2  border-primaryGreen bg-primaryGreen z-50 placeholder:text-whitee text-primaryYellow font-semibold  outline-0 p-4 rounded-2xl"
+        className="w-full sticky  border-2  border-primaryGreen bg-primaryGreen z-50 placeholder:text-whitee text-primaryYellow font-semibold  outline-0 p-4 rounded-2xl"
         onChange={(e) => setsearch(e.target.value)}
       />
-
+     <div className=" w-full overflow-y-auto flex-1/2 snap-mandatory pr-4 bg-fuchsia-50  ">
       {filterednotiis.map((singlenoti) => (
         // complete card note l
-        <div className=" pl-3 flex relative flex-col w-full gap-2 rounded-2xl overflow-hidden border-2 transition-all duration-300 group border-primaryYellow hover:border-primaryGreen">
+        <div className=" pl-3 flex relative flex-col w-full  gap-2 rounded-2xl overflow-hidden mb-4 border-2 transition-all duration-300 group border-primaryYellow hover:border-primaryGreen">
           <div className="absolute top-0 transition-all duration-300 left-0 bg-primaryYellow w-5 h-full group-hover:bg-primaryGreen"></div>
           {/* top section */}
           <div className="w-full top-0 p-2  flex justify-between">
@@ -96,6 +96,7 @@ const Pastes = () => {
         
         </div>
       ))}
+      </div>
     </div>
   );
 };

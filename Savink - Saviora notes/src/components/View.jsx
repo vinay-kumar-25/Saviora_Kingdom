@@ -22,11 +22,11 @@ const View = () => {
   };
 
   return (
-    <div className="text-white w-full place-self-center flex justify-center flex-col items-center gap-8 text-2xl">
+    <div className="text-white w-full  max-h-8/12 h-full  flex justify-center flex-col items-center gap-8 text-2xl ">
       <div className="flex gap-4 h-16 w-full justify-between">
         <input
           readOnly
-          className="font-medium w-full bg-primaryYellow text-primaryGreen border-primaryYellow border-2 rounded-xl focus:border-primaryGreen outline-0 p-1 px-2"
+          className="font-medium flex-1/2  bg- text-primaryGreen border-primaryYellow border-2 rounded-xl   outline-0 p-1 px-2"
           type="text"
           value={title}
           placeholder="Note Title"
@@ -52,7 +52,7 @@ const View = () => {
       </div>
 
       <div
-        className="border-2 bg-primaryGreen w-full font-medium rounded-2xl p-4 min-h-[60vh] border-primaryGreen text-primaryYellow outline-0 whitespace-pre-wrap"
+        className="border-2 w-full font-medium text-xl  rounded-2xl p-4 flex-1/2  border-primaryGreen text-stone-500 outline-0 whitespace-pre-wrap"
       >
         {value}
       </div>
