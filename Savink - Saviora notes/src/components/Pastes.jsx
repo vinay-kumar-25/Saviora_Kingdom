@@ -36,11 +36,11 @@ const Pastes = () => {
     navigate(`/view?paste_id=${notid}`);
   }
   return (
-    <div className="flex w-full gap-4 flex-col  ">
+    <div className="flex w-full gap-4 flex-col overflow-hidden ">
       {/* search bar */}
       <input
         placeholder="search here...."
-        className="w-full sticky  border-2  border-primaryGreen bg-primaryGreen z-50 placeholder:text-whitee text-primaryYellow font-semibold  outline-0 p-4 rounded-2xl"
+        className="w-full   border-2  border-primaryGreen bg-primaryGreen placeholder:text-whitee text-primaryYellow font-semibold  outline-0 p-4 rounded-2xl"
         onChange={(e) => setsearch(e.target.value)}
       />
      <div className=" w-full overflow-y-auto flex-1/2 snap-mandatory pr-4 ">
