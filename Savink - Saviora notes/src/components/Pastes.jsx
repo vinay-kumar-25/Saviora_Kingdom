@@ -26,8 +26,8 @@ const Pastes = () => {
   };
   //handle copy
   const handlecopy = (val) => {
-    () => navigator.clipboard.writeText(singlenoti.value);
-    toast(`copied "${val}" `);
+     navigator.clipboard.writeText(val);
+     toast.success("Note copied to clipboard!");
   };
   const edithandler = (notid) => {
     navigate(`/?paste_id=${notid}`);
