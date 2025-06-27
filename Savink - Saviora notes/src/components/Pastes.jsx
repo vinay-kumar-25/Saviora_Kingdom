@@ -36,14 +36,14 @@ const Pastes = () => {
     navigate(`/view?paste_id=${notid}`);
   }
   return (
-    <div className="flex w-full gap-4 flex-col overflow-hidden ">
+    <div className="flex w-full gap-4 flex-col overflow-hidden  ">
       {/* search bar */}
       <input
         placeholder="search here...."
         className="w-full   border-2  border-primaryGreen bg-primaryGreen placeholder:text-whitee text-primaryYellow font-semibold  outline-0 p-4 rounded-2xl"
         onChange={(e) => setsearch(e.target.value)}
       />
-     <div className=" w-full overflow-y-auto flex-1/2 snap-mandatory pr-4 ">
+     <div className=" w-full overflow-y-auto flex-1/2 snap-mandatory pr-4">
       {filterednotiis.map((singlenoti) => (
         // complete card note l
         <div className=" pl-3 flex relative flex-col w-full  gap-2 rounded-2xl overflow-hidden mb-4 border-2 transition-all duration-300 group border-primaryYellow hover:border-primaryGreen">
@@ -80,7 +80,7 @@ const Pastes = () => {
               >
                 <FontAwesomeIcon icon={faCopy}/>
               </button>
-              <button className="px-2 border rounded-sm py-2 w-9 flex justify-center items-center transition-all duration-300 h-10 hover:text-primaryGreen text-primaryYellow border-primaryYellow   hover:border-primaryGreen">
+              <button onClick={()=>toast("🫠Coming Soon")} className="px-2 border rounded-sm py-2 w-9 flex justify-center items-center transition-all duration-300 h-10 hover:text-primaryGreen text-primaryYellow border-primaryYellow   hover:border-primaryGreen">
                 <FontAwesomeIcon icon={faLink}/>
               </button>
             
