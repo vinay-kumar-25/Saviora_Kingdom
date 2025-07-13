@@ -5,6 +5,9 @@ import Home from "./components/Home";
 import Pastes from "./components/Pastes";
 import View from "./components/View"
 import { Toaster } from "react-hot-toast";
+import { useSelector } from "react-redux";
+import { notiislice } from "./js/slices";
+
 
 const router = createBrowserRouter([
   {
@@ -36,9 +39,12 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
+  const theme  = useSelector((state)=>state.notii.theme)
+  console.log("theme value = ",theme)
   return (
-    <div>
-      <RouterProvider router={router} />
+<div className={theme === "dark" ? "bg-black" : "bg-white"}>
+ 
+    <RouterProvider router={router} />
       <Toaster/>
     </div>
   );

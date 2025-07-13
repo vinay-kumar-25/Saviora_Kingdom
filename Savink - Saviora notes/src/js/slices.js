@@ -10,6 +10,7 @@ const initialState = {
       date: "00/00/00",
     },
   ],
+  theme:"dark",
 };
 
 export const notiislice = createSlice({
@@ -90,8 +91,15 @@ export const notiislice = createSlice({
     // Load notes from localStorage
     loadfromlocalstorage: (state) => {
       const local = localStorage.getItem("localnotiis");
+      const localtheme = localStorage.getItem("theme")
       state.notiis = local ? JSON.parse(local) : [];
+      state.theme = localtheme?JSON.parse(localtheme):"dark";
     },
+    changetheme:(state)=>{
+    state.theme =="dark"?state.theme = "light":state.theme="dark";
+    const localtheme = localStorage.setItem("theme",JSON.stringify(state.theme));
+    console.log("current theme is ",state.theme);
+    }
   },
 });
 
@@ -101,4 +109,5 @@ export const {
   deletenotii,
   updatenotii,
   loadfromlocalstorage,
+  changetheme,
 } = notiislice.actions;
