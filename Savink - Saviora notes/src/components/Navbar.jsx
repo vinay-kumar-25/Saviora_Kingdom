@@ -22,7 +22,7 @@ const handletheme = ()=>{
       <div className="flex gap-4">
         <NavLink to={"/"} className="  rounded-xl p-2  px-4 font-semibold text-primaryGreen border-2 border-primaryGreen hover:bg-primaryYellow transition-all duration-300 " >Create</NavLink>
         <NavLink to={"/pastes_list"} className="  rounded-xl p-2  px-4 font-semibold text-primaryGreen border-2 border-primaryGreen hover:text-primaryOrange hover:border-primaryOrange transition-all duration-300 " >Pastes</NavLink>
-        <button onClick={()=>handletheme()} className="  rounded-xl p-2  px-4 font-semibold text-primaryGreen border border-primaryGreen hover:text-primaryOrange hover:border-primaryOrange transition-all duration-300 ">{theme==="dark"?<FontAwesomeIcon className="text-xl" icon={faSun}/>:<FontAwesomeIcon className="text-xl" icon={faMoon}/>}</button>
+        <button onClick={()=>handletheme()} className="  rounded-xl p-2  px-4 font-semibold text-primaryGreen border-2 border-primaryGreen hover:text-primaryOrange hover:border-primaryOrange transition-all duration-300 ">{theme==="dark"?<FontAwesomeIcon className="transition-all duration-1000 ease-in-out text-xl text-white" icon={faSun}/>:<FontAwesomeIcon className="text-xl text-black transition-all duration-1000 ease-in-out" icon={faMoon}/>}</button>
       </div>
     </div>
   )

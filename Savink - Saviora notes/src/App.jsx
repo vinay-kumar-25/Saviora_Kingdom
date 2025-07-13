@@ -7,6 +7,8 @@ import View from "./components/View"
 import { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 import { notiislice } from "./js/slices";
+import lightbg from "../src/assets/bgtexture.jpg"
+import darkbg from "../src/assets/dark_texture.jpg"
 
 
 const router = createBrowserRouter([
@@ -41,8 +43,17 @@ const router = createBrowserRouter([
 function App() {
   const theme  = useSelector((state)=>state.notii.theme)
   console.log("theme value = ",theme)
+  const bgImage = theme === "dark" ? darkbg : lightbg;
   return (
-<div className={theme === "dark" ? "bg-black" : "bg-white"}>
+   <div
+   className="transition-all duration-1000 ease-in-out"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
+      }}
+    >
  
     <RouterProvider router={router} />
       <Toaster/>
