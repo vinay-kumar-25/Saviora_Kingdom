@@ -72,28 +72,26 @@ const Home = () => {
   };
 
   return (
-    <div className="text-white w-full  max-h-8/12 h-full  flex justify-center flex-col items-center gap-8 text-2xl ">
-      <div className="flex gap-4 h-16 w-full  justify-between">
+    <div className="text-white w-full  py-12 h-full  flex justify-between flex-col items-center gap-4 text-2xl ">
         <input
-          className="font-medium flex-1/2  bg- text-primaryGreen border-primaryYellow border-2 rounded-xl  focus:border-primaryGreen outline-0 p-1 px-2"
+          className="font-medium w-full  bg- text-primaryGreen h-16 border-primaryYellow border-2 rounded-xl  focus:border-primaryGreen outline-0 p-2"
           type="text"
           value={title}
           placeholder="Enter Title..."
           onChange={(e) => settitle(e.target.value)}
         />
-        <button
-          onClick={addnote}
-          className=" text-lg border-2 border-primaryYellow  rounded-xl p-2 text-primaryYellow hover:text-primaryGreen hover:border-primaryGreen px-4 font-semibold "
-        >
-          {paste_id ? "Update" : "Create"}
-        </button>
-      </div>
       <textarea
         value={value}
         placeholder="Enter your note here..."
         className="border-2 border-primaryGreen  w-full text-xl leading-8 font-medium rounded-2xl p-4 flex-1/2 text-stone-500  outline-0 "
         onChange={(e) => setvalue(e.target.value)}
-      ></textarea>
+      ></textarea> 
+      <button
+          onClick={addnote}
+          className="w-full h-16 text-lg border-2 border-primaryYellow transition-all duration-300  rounded-xl p-2 text-primaryYellow hover:text-primaryOrange hover:border-primaryOrange px-4 font-semibold "
+        >
+          {paste_id ? "Update" : "Create"}
+        </button>
     </div>
   );
 };
