@@ -26,13 +26,13 @@ const Navbar = () => {
 
   return (
     <div className="w-full mt-2 border md:border-2   border-primaryOrange rounded-2xl items-center flex justify-between p-2 md:p-3">
-      <span className="md:text-3xl text-2xl flex gap-1 justify-center items-center text-primaryOrange font-bold">
-        {" "}
+      <span className="md:text-3xl text-2xl flex gap-1 justify-between items-center text-primaryOrange font-bold">
+        
         <img
-          className="rounded-xl md:rounded-2xl h-8 md:h-12"
+          className="h-12 md:h-16 "
           src={savioralogo}
           alt="📚"
-        />{" "}
+        />
         Savink
       </span>
       <div className="flex gap-2 md:gap-4">
