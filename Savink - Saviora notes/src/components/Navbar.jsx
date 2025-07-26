@@ -44,7 +44,7 @@ const Navbar = () => {
         </NavLink>
         <NavLink
           to={"/"}
-          className="  rounded-xl hover:scale-95    text-2xl group  border border-primaryYellow h-12 w-12 flex justify-center items-center text-primaryYellow hover:text-primaryGreen  hover:bg-primaryYellow transition-all duration-300 "
+          className="  rounded-xl hover:scale-95    text-2xl group  border border-primaryGreen h-12 w-12 flex justify-center items-center text-primaryGreen hover:text-primaryGreen  hover:bg-primaryYellow transition-all duration-300 "
         >
           <FontAwesomeIcon icon={faPlus} />
         </NavLink>

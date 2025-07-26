@@ -73,8 +73,9 @@ const Home = () => {
 
   return (
     <div className="text-white w-full  py-12 h-full  flex justify-between flex-col items-center gap-4 text-2xl ">
-        <input
-          className="font-medium w-full  bg- text-primaryGreen h-16 border-primaryYellow border-2 rounded-xl  focus:border-primaryGreen outline-0 p-2"
+        <div className="border-2 w-full flex flex-col overflow-hidden flex-1/2 backdrop-blur-sm border-primaryGreen rounded-2xl">
+          <input
+          className="font-medium w-full text-primaryYellow h-16 border-b-2 bg-primaryGreen hover border-primaryGreen px-4 outline-0 p-2"
           type="text"
           value={title}
           placeholder="Enter Title..."
@@ -83,9 +84,9 @@ const Home = () => {
       <textarea
         value={value}
         placeholder="Enter your note here..."
-        className="border-2 border-primaryGreen  w-full text-xl leading-8 font-medium rounded-2xl p-4 flex-1/2 text-stone-500  outline-0 "
+        className="  w-full text-xl leading-8 font-medium flex-1/2  p-4  text-stone-500  outline-0 "
         onChange={(e) => setvalue(e.target.value)}
-      ></textarea> 
+      ></textarea> </div>
       <button
           onClick={addnote}
           className="w-full h-16 text-lg border-2 border-primaryYellow transition-all duration-300  rounded-xl p-2 text-primaryYellow hover:text-primaryOrange hover:border-primaryOrange px-4 font-semibold "

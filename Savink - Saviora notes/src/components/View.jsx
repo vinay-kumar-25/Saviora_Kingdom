@@ -30,16 +30,19 @@ const View = () => {
 
   return (
     <div className="text-white w-full   h-full  flex  flex-col gap-2 text-2xl py-20 ">
+              <div className="border-2 w-full flex flex-col overflow-hidden flex-1/2 backdrop-blur-sm border-primaryGreen rounded-2xl">
+
       <input
         readOnly
-        className="font-medium text-primaryGreen max-w-full border-primaryYellow border-2 rounded-xl h-16  outline-0 p-1 px-2"
+          className="font-medium w-full text-primaryYellow h-16 border-b-2 bg-primaryGreen hover border-primaryGreen px-4 outline-0 p-2"
         type="text"
         value={title}
         placeholder="Note Title"
       />
-      <div className="border-2 rounded-2xl overflow-y-scroll flex-1/2 border-primaryGreen">
+      <div className="overflow-y-scroll flex-1/2">
         <div className="w-full font-medium text-xl leading-8  p-4  text-stone-500 outline-0 whitespace-pre-wrap">
           {value}
+        </div>
         </div>
       </div>
       <div className="flex gap-4  w-full  flex-row flex-wrap justify-between">
