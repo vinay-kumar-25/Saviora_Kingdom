@@ -25,8 +25,7 @@ export const notiislice = createSlice({
         title: t,
         value: v,
         id: i,
-        // date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).replace(',', ''),
-        date : "Aug 12 2025"
+        date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).replace(',', ''),
       };
       state.notiis.push(newnotii);
 
