@@ -53,13 +53,13 @@ const Pastes = () => {
       />
 
       {/* ✅ Notes grouped by date */}
-      <div className="w-full overflow-y-auto flex-1/2 pr-4">
+      <div className="w-full overflow-y-auto flex-1/2 pr-4 ">
         {Object.keys(groupedByDate).map((dateKey) => (
-          <div key={dateKey} >
+          <div key={dateKey} className=" mb-8 md:mb-14">
             {/* ✅ Date Header */}
-            <div className="text-center  text-primaryOrange font-bold items-center flex mb-4">
-              <div className="bg-amber-600  flex-1/4 m-2 h-0.5 "></div><FontAwesomeIcon icon={faCalendar} className="mr-2" /> {dateKey}
-              <div className="bg-amber-600  flex-1/4 m-2 h-0.5 "></div>
+            <div className="text-center  text-primaryOrange text-sm font-semibold items-center flex mb-4 md:mb-8">
+              <div className="bg-primaryOrange flex-1/4 m-2 h-[1px] opacity-50 "></div><FontAwesomeIcon icon={faCalendar} className="mr-2" /> {dateKey}
+              
             </div>
 
             {groupedByDate[dateKey].map((singlenoti) => (
@@ -83,32 +83,32 @@ const Pastes = () => {
                 <div className="flex justify-between py-2 md:ml-4 flex-row-reverse px-2">
                   <div className="flex gap-2">
                     <button
-                      className="px-2 border rounded-xl py-2 w-9 flex justify-center items-center h-10 hover:text-primaryGreen text-primaryYellow border-primaryYellow hover:border-primaryGreen"
+                      className="px-2 border rounded-xl py-2 w-12   flex justify-center items-center h-10 hover:text-primaryGreen text-primaryYellow border-primaryYellow hover:border-primaryGreen"
                       onClick={() => edithandler(singlenoti.id)}
                     >
                       <FontAwesomeIcon icon={faPencil} />
                     </button>
                     <button
                       onClick={() => handleview(singlenoti.id)}
-                      className="px-2 border rounded-xl py-2 w-9 flex justify-center items-center hover:text-primaryGreen text-primaryYellow border-primaryYellow hover:border-primaryGreen"
+                      className="px-2 border rounded-xl py-2 w-12   flex justify-center items-center hover:text-primaryGreen text-primaryYellow border-primaryYellow hover:border-primaryGreen"
                     >
                       <FontAwesomeIcon icon={faEye} />
                     </button>
                     <button
-                      className="px-2 border rounded-xl py-2 w-9 flex justify-center items-center h-10 hover:text-primaryOrange text-primaryYellow border-primaryYellow hover:border-primaryOrange"
+                      className="px-2 border rounded-xl py-2 w-12   flex justify-center items-center h-10 hover:text-primaryOrange text-primaryYellow border-primaryYellow hover:border-primaryOrange"
                       onClick={() => deletenotii(singlenoti.id)}
                     >
                       <FontAwesomeIcon icon={faTrash} />
                     </button>
                     <button
-                      className="px-2 border rounded-xl py-2 w-9 flex justify-center items-center h-10 hover:text-primaryGreen text-primaryYellow border-primaryYellow hover:border-primaryGreen"
+                      className="px-2 border rounded-xl py-2 w-12   flex justify-center items-center h-10 hover:text-primaryGreen text-primaryYellow border-primaryYellow hover:border-primaryGreen"
                       onClick={() => handlecopy(singlenoti.value)}
                     >
                       <FontAwesomeIcon icon={faCopy} />
                     </button>
                     <button
                       onClick={() => toast("🫠 Coming Soon")}
-                      className="px-2 border rounded-xl py-2 w-9 flex justify-center items-center hover:text-primaryGreen text-primaryYellow border-primaryYellow hover:border-primaryGreen"
+                      className="px-2 border rounded-xl py-2 w-12   flex justify-center items-center hover:text-primaryGreen text-primaryYellow border-primaryYellow hover:border-primaryGreen"
                     >
                       <FontAwesomeIcon icon={faLink} />
                     </button>

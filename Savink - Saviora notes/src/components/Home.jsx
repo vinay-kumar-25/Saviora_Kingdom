@@ -66,7 +66,7 @@ const Home = () => {
       dispatch(addnotii(payload));
     }
 
-    navigate("/",{replace:true});
+    navigate("/pastes_list",{replace:true});
     settitle("");
     setvalue("");
   };
