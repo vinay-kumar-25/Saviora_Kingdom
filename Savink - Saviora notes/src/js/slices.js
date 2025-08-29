@@ -66,7 +66,7 @@ export const notiislice = createSlice({
         title: t,
         value: v,
         id: i,
-        date: new Date("2025-06-23").toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).replace(',', ''),
+        date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).replace(',', ''),
       };
 
       const index = state.notiis.findIndex((notii) => notii.id === i);
